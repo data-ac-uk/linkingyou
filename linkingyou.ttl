@@ -1,0 +1,138 @@
+@prefix lyou: <http://purl.org/linkingyou/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+lyou:academia rdfs:label "Academia" ;
+	rdfs:comment "This is simply used to identify which predicates are related to academia so they can be listed separately in the documentation."@en.
+
+foaf:homepage a owl:ObjectProperty ;
+        rdfs:label "homepage"@en .
+
+lyou:events a owl:ObjectProperty ;
+	rdfs:label "events page"@en .
+lyou:business a owl:ObjectProperty ;
+	rdfs:label "business page"@en .
+lyou:research a owl:ObjectProperty ;
+	rdfs:label "research page"@en .
+lyou:depts  a owl:ObjectProperty ;
+	rdfs:label "departments page"@en ;
+	rdfs:comment "Links a group or organisation to a document describing its parts. This is not a linkingyou term but was added as the existing terms were only applicable to academia."@en .
+lyou:about a owl:ObjectProperty ;
+	rdfs:label "about page"@en .
+lyou:about-leader  a owl:ObjectProperty ;
+	rdfs:label "leader page"@en ;
+	rdfs:comment "Links a group or organisation to a page about the leader of that organisation. This is modified from the linkingyou 'vc' page to make it work for organistations where the leader is not a Vice Chancellor."@en .
+lyou:about-executive  a owl:ObjectProperty ;
+	rdfs:label "executive page"@en ;
+	rdfs:comment "Links a group or organisation to a page about the senior staff, be it Microsoft's senior staff or the committee members of a university club. This was not a linkingyou term."@en.
+lyou:about-sites  a owl:ObjectProperty ;
+	rdfs:label "sites page"@en ;
+	rdfs:comment "Links a group or organisation to a page about the sites or campuses of that organisation. Was about/campuses in linkingyou, but altered here to be less academic-only."@en.
+lyou:search a owl:ObjectProperty ;
+	rdfs:label "search page"@en ;
+	rdfs:comment "Perhaps this should link to a string with a variable in to indicate how to construct a search?"@en .
+lyou:press a owl:ObjectProperty ;
+	rdfs:label "press page"@en .
+lyou:press-facts a owl:ObjectProperty ;
+	rdfs:label "press facts page"@en .
+lyou:news a owl:ObjectProperty ;
+	rdfs:label "news page"@en .
+lyou:jobs a owl:ObjectProperty ;
+	rdfs:label "jobs page"@en .
+lyou:legal a owl:ObjectProperty ;
+	rdfs:label "legal page"@en .
+lyou:legal-policies a owl:ObjectProperty ;
+	rdfs:label "policies page"@en .
+lyou:legal-data_protection a owl:ObjectProperty ;
+	rdfs:label "data-protection statement page"@en .
+lyou:legal-environment a owl:ObjectProperty ;
+	rdfs:label "environmental policy page"@en .
+lyou:legal-equality a owl:ObjectProperty ;
+	rdfs:label "equality policy page"@en .
+lyou:legal-foi a owl:ObjectProperty ;
+	rdfs:label "freedom-of-information policy page"@en .
+lyou:legal-ict a owl:ObjectProperty ;
+	rdfs:label "ICT policy page"@en .
+lyou:legal-website a owl:ObjectProperty ;
+	rdfs:label "website legal information page"@en .
+lyou:legal-regulations a owl:ObjectProperty ;
+	rdfs:label "regulations page"@en .
+lyou:contact a owl:ObjectProperty ;
+	rdfs:label "contact page"@en .
+lyou:contact-staff a owl:ObjectProperty ;
+	rdfs:label "staff contact page"@en .
+
+
+lyou:courses a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "courses page"@en .
+lyou:undergraduate a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "undergraduate admissions page"@en .
+lyou:undergraduate-courses a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "undergraduate courses page"@en .
+lyou:undergraduate-courses-entry_requirements a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "undergraduate courses entry requirements page"@en .
+lyou:undergraduate-prospectus a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "undergraduate prospectus page"@en;
+	rdfs:comment "Link a university, or other degree awarding organisation, to its undergraduate prospectus. This may be an HTML or PDF document."@en .
+
+lyou:postgraduate a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "postgraduate admissions page"@en .
+lyou:postgraduate-courses a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "postgraduate courses page"@en .
+lyou:postgraduate-courses-entry_requirements a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "postgraduate courses entry requirements page"@en .
+lyou:postgraduate-prospectus a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "postgraduate prospectus page"@en;
+	rdfs:comment "Link a university, or other degree awarding organisation, to its postgraduate prospectus. This may be an HTML or PDF document."@en .
+
+lyou:foundation a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "foundation admissions page"@en .
+lyou:foundation-courses a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "foundation courses page"@en .
+lyou:foundation-courses-entry_requirements a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "foundation courses entry requirements page"@en .
+lyou:foundation-prospectus a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "foundation prospectus page"@en;
+	rdfs:comment "Link a university, or other degree awarding organisation, to its foundation prospectus. This may be an HTML or PDF document."@en .
+
+lyou:opendays a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "open days page"@en .
+lyou:conferences a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "conferences page"@en .
+lyou:public_lectures a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "public lectures page"@en .
+lyou:events-graduation a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "graduation event page"@en .
+lyou:business-incubation a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "business incubation page"@en .
+lyou:business-ktp a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "business knowlege transfer partnerships page"@en .
+lyou:academic_depts a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "academic departments page"@en .
+lyou:support_depts a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "support departments page"@en .
+lyou:about-parents a owl:ObjectProperty ;
+	dcterms:subject lyou:academia ;
+	rdfs:label "information for parents page"@en .
