@@ -62,6 +62,8 @@ lyou:contact a owl:ObjectProperty ;
 	rdfs:label "contact page"@en .
 lyou:contact-staff a owl:ObjectProperty ;
 	rdfs:label "staff contact page"@en .
+lyou:ict-support a owl:ObjectProperty ;
+	rdfs:label "ICT support page"@en .
 
 
 lyou:courses a owl:ObjectProperty ;
