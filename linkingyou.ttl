@@ -44,7 +44,7 @@ lyou:legal a owl:ObjectProperty ;
 	rdfs:label "legal page"@en .
 lyou:legal-policies a owl:ObjectProperty ;
 	rdfs:label "policies page"@en .
-lyou:legal-data_protection a owl:ObjectProperty ;
+lyou:legal-data-protection a owl:ObjectProperty ;
 	rdfs:label "data-protection statement page"@en .
 lyou:legal-environment a owl:ObjectProperty ;
 	rdfs:label "environmental policy page"@en .
@@ -73,7 +73,7 @@ lyou:undergraduate a owl:ObjectProperty ;
 lyou:undergraduate-courses a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "undergraduate courses page"@en .
-lyou:undergraduate-courses-entry_requirements a owl:ObjectProperty ;
+lyou:undergraduate-courses-entry-requirements a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "undergraduate courses entry requirements page"@en .
 lyou:undergraduate-prospectus a owl:ObjectProperty ;
@@ -87,7 +87,7 @@ lyou:postgraduate a owl:ObjectProperty ;
 lyou:postgraduate-courses a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "postgraduate courses page"@en .
-lyou:postgraduate-courses-entry_requirements a owl:ObjectProperty ;
+lyou:postgraduate-courses-entry-requirements a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "postgraduate courses entry requirements page"@en .
 lyou:postgraduate-prospectus a owl:ObjectProperty ;
@@ -101,7 +101,7 @@ lyou:foundation a owl:ObjectProperty ;
 lyou:foundation-courses a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "foundation courses page"@en .
-lyou:foundation-courses-entry_requirements a owl:ObjectProperty ;
+lyou:foundation-courses-entry-requirements a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "foundation courses entry requirements page"@en .
 lyou:foundation-prospectus a owl:ObjectProperty ;
@@ -115,7 +115,7 @@ lyou:opendays a owl:ObjectProperty ;
 lyou:conferences a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "conferences page"@en .
-lyou:public_lectures a owl:ObjectProperty ;
+lyou:public-lectures a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "public lectures page"@en .
 lyou:events-graduation a owl:ObjectProperty ;
@@ -127,10 +127,10 @@ lyou:business-incubation a owl:ObjectProperty ;
 lyou:business-ktp a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "business knowlege transfer partnerships page"@en .
-lyou:academic_depts a owl:ObjectProperty ;
+lyou:academic-depts a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "academic departments page"@en .
-lyou:support_depts a owl:ObjectProperty ;
+lyou:support-depts a owl:ObjectProperty ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "support departments page"@en .
 lyou:about-parents a owl:ObjectProperty ;
