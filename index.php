@@ -72,10 +72,16 @@ h1 {
 	display: inline-block;
 	left: -40px;
 	top: -20px;
+        box-shadow: 4px 10px 10px #000;
+
+	-webkit-transform: rotate(-2deg); 
+	-moz-transform: rotate(-2deg); 
+	-o-transform: rotate(-2deg);
+	-ms-transform: rotate(-2deg); 
 }	
 h2 {
 	background-color: #ff9933;
-	margin-left: -10px;
+	margin-left: -50px;
 	margin-top: 1em;
 	margin-bottom: 0.5em;
 	padding: 5px 10px 5px 10px;
@@ -83,6 +89,12 @@ h2 {
 	border-bottom: solid 2px #000;
 	font-size: 150%;
 	display: inline-block;
+        box-shadow: 2px 5px 8px #000;
+
+	-webkit-transform: rotate(-5deg); 
+	-moz-transform: rotate(-5deg); 
+	-o-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg); 
 }
 dl, p {
 	margin-top: 0.5em;
@@ -95,6 +107,12 @@ dt {
 	padding: 4px;
 	background-color: #666666;
 	color: #fff;
+        box-shadow: 1px 3px 4px #333;
+
+	-webkit-transform: rotate(-1deg); 
+	-moz-transform: rotate(-1deg); 
+	-o-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg); 
 }	
 dd {
 	background-color: #c9c9c9;
@@ -104,6 +122,7 @@ dd {
 	margin-left: 20px;
 	margin-top: -16px;
 	margin-bottom: 10px;
+        box-shadow: 1px 3px 4px #333;
 }
 .uri {
 	margin-top: 0.5em;
@@ -120,6 +139,15 @@ em {
 strong {
 	font-weight: bold;
 }
+li { 
+	list-style: square;
+	margin-left: 3em;
+	margin-bottom: 0.5em;
+}
+a {
+	color: #8B0000;
+	text-decoration:none;
+}
         </style>
     </head>
     <body>
@@ -135,8 +163,8 @@ strong {
 <a href="http://lncn.eu/toolkit">Linking-You project</a> performed by those clever chaps at 
 Lincoln University. It has not been endorsed by them. The RDF version of the linking-you toolkit was created by <a href="http://users.ecs.soton.ac.uk/cjg/">Christopher Gutteridge</a>.</p>
 
-<p>View <a href='http://openorg.ecs.soton.ac.uk/linkingyou/linkingyou.ttl'>Linking-You Vocabulary</a> (RDF Turtle).</p>
-<p>For ease of consumption, the terms are split into the following categories.</p>
+<p>View: <a href='http://openorg.ecs.soton.ac.uk/linkingyou/linkingyou.ttl'>Linking-You Vocabulary</a> (RDF Turtle).</p>
+<p>Skip to:</p>
 <ul>
 <li><a href="#core">Core page types</a></li>
 <li><a href="#extended">Additional page types</a></li>
@@ -168,35 +196,28 @@ function render_vocab()
 	$graph->load( "http://purl.org/linkingyou/" );
 	$graph->ns( "lyou", "http://purl.org/linkingyou/" );
 	
-	$nonacademic = array();
-	foreach( $graph->allOfType( "owl:ObjectProperty" ) as $property )
-	{
-		$nonacademic[ $property->toString() ] = $property;
-	}
-	$academic = $graph->resource( "http://purl.org/linkingyou/academia" )->all( "-dcterms:subject" );
+	print "<a name='core'></a><h2>Core Page Types</h2>";
+	render_subject( $graph->resource("http://purl.org/linkingyou/core" ));
+	print "<a name='extended'></a><h2>Additional Page Types</h2>";
+	render_subject( $graph->resource("http://purl.org/linkingyou/extended" ));
+	print "<a name='academia'></a><h2>Academic Page Types</h2>";
+	print "<p>These page types are not strictly limited to universities. Non-academic organisations may do research or have converences.</p>";
+	render_subject( $graph->resource("http://purl.org/linkingyou/academia" ));
+	print "<a name='education'></a><h2>Education Page Types</h2>";
+	render_subject( $graph->resource("http://purl.org/linkingyou/education" ));
+}
 
-	# strip the non academic items from the nonacademic list	
-	foreach( $academic as $property ) 
-	{
-		unset( $nonacademic[ $property->toString() ] );
-	}
-
-	print "<h2>General Page Types</h2>";
+function render_subject( $subject )
+{
+	$list = $subject->all( "-dcterms:subject" );
 	print "<dl>";
-	foreach( $nonacademic as $property )
-	{
-		render_property( $property );
-	}
-	print "</dl>";
-
-	print "<h2>Academic Page Types</h2>";
-	print "<dl>";
-	foreach( $academic as $property )
+	foreach( $list as $property )
 	{
 		render_property( $property );
 	}
 	print "</dl>";
 }
+
 
 function render_property( $property )
 {
