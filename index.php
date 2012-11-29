@@ -146,7 +146,10 @@ li {
 }
 a {
 	color: #8B0000;
-	text-decoration:none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
 }
         </style>
     </head>
@@ -161,7 +164,7 @@ a {
 
 <p>This vocublary is based on the 
 <a href="http://lncn.eu/toolkit">Linking-You project</a> performed by those clever chaps at 
-Lincoln University. It has not been endorsed by them. The RDF version of the linking-you toolkit was created by <a href="http://users.ecs.soton.ac.uk/cjg/">Christopher Gutteridge</a>.</p>
+Lincoln University. This mapping <a href='http://linkingyou.blogs.lincoln.ac.uk/2012/11/20/linking-you-rdf-vocabulary/'>has been endorsed by the Lincoln team</a>. The RDF version of the linking-you toolkit was created by <a href="http://users.ecs.soton.ac.uk/cjg/">Christopher Gutteridge</a>.</p>
 
 <p>View: <a href='http://openorg.ecs.soton.ac.uk/linkingyou/linkingyou.ttl'>Linking-You Vocabulary</a> (RDF Turtle).</p>
 <p>Skip to:</p>

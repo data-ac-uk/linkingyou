@@ -8,11 +8,14 @@ lyou: a owl:Ontology ;
 
 lyou:academia rdfs:label "Academia" ;
 	rdfs:comment "This is used to identify which predicates are related to academia (other than education) so they can be listed separately in the documentation."@en.
+
 lyou:education rdfs:label "Education" ;
 	rdfs:comment "This is used to identify which predicates are related to education so they can be listed separately in the documentation."@en.
+
 lyou:core rdfs:label "Core" ;
 	rdfs:comment "This is used to identify which predicates represent a simple core of Linking You"@en.
-lyou:extended rdfs:label "Core" ;
+
+lyou:extended rdfs:label "Extended Terms" ;
 	rdfs:comment "This is used to identify which predicates are outside the the core terms. Still useful but listed in a second section."@en.
 
 
@@ -49,6 +52,7 @@ lyou:about a owl:ObjectProperty, rdf:Property ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	rdfs:label "about page"@en .
+
 lyou:about-leader  a owl:ObjectProperty, rdf:Property ;
 	dcterms:subject lyou:extended ;
         rdfs:isDefinedBy lyou: ;
@@ -179,6 +183,13 @@ lyou:ict-support a owl:ObjectProperty, rdf:Property ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	rdfs:label "ICT support page"@en .
+lyou:open-data  a owl:ObjectProperty, rdf:Property ;
+	dcterms:subject lyou:extended ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	rdfs:label "open data page"@en ;
+	rdfs:comment "Links a group or organisation to a page (or the homepage of a website) describing open data services from the organisation, eg. http://data.lincoln.ac.uk/"@en .
 
 
 lyou:courses a owl:ObjectProperty, rdf:Property ;
@@ -325,3 +336,16 @@ lyou:about-parents a owl:ObjectProperty, rdf:Property ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:education ;
 	rdfs:label "information for parents page"@en .
+lyou:international-students a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	dcterms:subject lyou:education ;
+	rdfs:label "information for international students page"@en .
+lyou:conference-facilities a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+        rdfs:domain foaf:Organization ;
+        rdfs:range foaf:Document ;
+        dcterms:subject lyou:academia ;
+        rdfs:label "conference facilities page"@en .
+
