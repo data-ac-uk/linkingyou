@@ -186,8 +186,10 @@ Lincoln University. This mapping <a href='http://linkingyou.blogs.lincoln.ac.uk/
 <h3>2013-01-29</h3>
 <ul>
 <li>Added comments to clarify several fields</li>
-<li>Added legal-ethics</li>
-<li>Split postgraduate terms into postgraduate-research and postgraduate-taught</li>
+<li>Added lyou:legal-ethics</li>
+<li>added terms for lyou:postgraduate-research and lyou:postgraduate-taught (and the related courses, prospectus and entry-requirement terms)</li>
+<li>deprecated less lyou:postgraduate-courses, lyou:postgraduate-prospectus, lyou:postgradute-entry-requirements as these are too vague.</li>
+<li>changed description of lyou:postgraduate to mean a general postgraduate admissions page, usually linking to both research and taught posgraduate admissions.</li>
 </ul>
 
 
