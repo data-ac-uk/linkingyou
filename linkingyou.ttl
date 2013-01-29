@@ -92,11 +92,13 @@ lyou:press a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
+	rdfs:comment "A page with information specifically aimed at journalists." ;
 	rdfs:label "press page"@en .
 lyou:press-facts a owl:ObjectProperty, rdf:Property ;
 	dcterms:subject lyou:extended ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
+	rdfs:comment "A page aimed at the press with a list of useful facts about the organisation." ;
 	rdfs:range foaf:Document ;
 	rdfs:label "press facts page"@en .
 lyou:news a owl:ObjectProperty, rdf:Property ;
@@ -176,6 +178,7 @@ lyou:contact-staff a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
+	rdfs:comment "A page giving contact details for staff in the organisation. Generally this is a searchable phonebook." ;
 	rdfs:label "staff contact page"@en .
 lyou:ict-support a owl:ObjectProperty, rdf:Property ;
 	dcterms:subject lyou:extended ;
@@ -224,31 +227,96 @@ lyou:undergraduate-prospectus a owl:ObjectProperty, rdf:Property ;
 	rdfs:label "undergraduate prospectus page"@en;
 	rdfs:comment "Link a university, or other degree awarding organisation, to its undergraduate prospectus. This may be an HTML or PDF document."@en .
 
-lyou:postgraduate a owl:ObjectProperty, rdf:Property ;
+
+# lyou:postgraduate a owl:ObjectProperty, rdf:Property ;
+#        rdfs:isDefinedBy lyou: ;
+#	rdfs:domain foaf:Organization ;
+#	rdfs:range foaf:Document ;
+#	dcterms:subject lyou:education ;
+#	rdfs:label "postgraduate admissions page"@en .
+#lyou:postgraduate-courses a owl:ObjectProperty, rdf:Property ;
+#        rdfs:isDefinedBy lyou: ;
+#	rdfs:domain foaf:Organization ;
+#	rdfs:range foaf:Document ;
+#	dcterms:subject lyou:education ;
+#	rdfs:label "postgraduate courses page"@en .
+#lyou:postgraduate-courses-entry-requirements a owl:ObjectProperty, rdf:Property ;
+#        rdfs:isDefinedBy lyou: ;
+#	rdfs:domain foaf:Organization ;
+#	rdfs:range foaf:Document ;
+#	dcterms:subject lyou:education ;
+#	rdfs:label "postgraduate courses entry requirements page"@en .
+#lyou:postgraduate-prospectus a owl:ObjectProperty, rdf:Property ;
+#        rdfs:isDefinedBy lyou: ;
+#	rdfs:domain foaf:Organization ;
+#	rdfs:range foaf:Document ;
+#	dcterms:subject lyou:education ;
+#	rdfs:label "postgraduate prospectus page"@en;
+#	rdfs:comment "Link a university, or other degree awarding organisation, to its postgraduate prospectus. This may be an HTML or PDF document."@en .
+
+
+lyou:postgraduate-taught a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:education ;
-	rdfs:label "postgraduate admissions page"@en .
-lyou:postgraduate-courses a owl:ObjectProperty, rdf:Property ;
+	rdfs:label "taught postgraduate admissions page"@en .
+lyou:postgraduate-taught-courses a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:education ;
-	rdfs:label "postgraduate courses page"@en .
-lyou:postgraduate-courses-entry-requirements a owl:ObjectProperty, rdf:Property ;
+	rdfs:label "taught postgraduate courses page"@en .
+lyou:postgraduate-taught-courses-entry-requirements a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:education ;
-	rdfs:label "postgraduate courses entry requirements page"@en .
-lyou:postgraduate-prospectus a owl:ObjectProperty, rdf:Property ;
+	rdfs:label "taught postgraduate entry requirements page"@en .
+lyou:postgraduate-taught-prospectus a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:education ;
-	rdfs:label "postgraduate prospectus page"@en;
-	rdfs:comment "Link a university, or other degree awarding organisation, to its postgraduate prospectus. This may be an HTML or PDF document."@en .
+	rdfs:label "taught postgraduate prospectus page"@en;
+	rdfs:comment "Link a university, or other degree awarding organisation, to its taught postgraduate prospectus. This may be an HTML or PDF document."@en .
+
+
+
+lyou:postgraduate-research a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	dcterms:subject lyou:education ;
+	rdfs:label "research postgraduate admissions page"@en .
+lyou:postgraduate-research-courses a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	dcterms:subject lyou:education ;
+	rdfs:label "research postgraduate courses (or programmes) page"@en .
+lyou:postgraduate-research-courses-entry-requirements a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	dcterms:subject lyou:education ;
+	rdfs:label "research postgraduate entry requirements page"@en .
+lyou:postgraduate-research-prospectus a owl:ObjectProperty, rdf:Property ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	dcterms:subject lyou:education ;
+	rdfs:label "research postgraduate prospectus page"@en;
+	rdfs:comment "Link a university, or other degree awarding organisation, to its research postgraduate prospectus. This may be an HTML or PDF document."@en .
+
+
+
+
+
+
+
+
+
 
 lyou:foundation a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
@@ -288,6 +356,13 @@ lyou:research a owl:ObjectProperty, rdf:Property ;
 	rdfs:range foaf:Document ;
 	dcterms:subject lyou:academia ;
 	rdfs:label "research page"@en .
+lyou:legal-ethics a owl:ObjectProperty, rdf:Property ;
+	dcterms:subject lyou:academia ;
+        rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	rdfs:comment "Many research organisations have a public ethics policy." ;
+	rdfs:label "ethics policy"@en .
 lyou:conferences a owl:ObjectProperty, rdf:Property ;
         rdfs:isDefinedBy lyou: ;
 	rdfs:domain foaf:Organization ;

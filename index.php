@@ -182,6 +182,15 @@ Lincoln University. This mapping <a href='http://linkingyou.blogs.lincoln.ac.uk/
    lyou:research &lt;https://www.soton.ac.uk/research/index.shtml&gt; .
 </div>
 
+<h2>Changelog</h2>
+<h3>2013-01-29</h3>
+<ul>
+<li>Added comments to clarify several fields</li>
+<li>Added legal-ethics</li>
+<li>Split postgraduate terms into postgraduate-research and postgraduate-taught</li>
+</ul>
+
+
 <?php
 render_vocab();
 ?>
