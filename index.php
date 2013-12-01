@@ -173,6 +173,7 @@ Lincoln University. This mapping <a href='http://linkingyou.blogs.lincoln.ac.uk/
 <li><a href="#extended">Additional page types</a></li>
 <li><a href="#academia">Academic page types (not related to education)</a></li>
 <li><a href="#education">Page types related to education</a></li>
+<li><a href="#uk">Page types for UK organisations</a></li>
 
 <h2>Example of Use</h2>
 <div class='code'>
@@ -190,6 +191,14 @@ Lincoln University. This mapping <a href='http://linkingyou.blogs.lincoln.ac.uk/
 <li>added terms for lyou:postgraduate-research and lyou:postgraduate-taught (and the related courses, prospectus and entry-requirement terms)</li>
 <li>deprecated less lyou:postgraduate-courses, lyou:postgraduate-prospectus, lyou:postgradute-entry-requirements as these are too vague.</li>
 <li>changed description of lyou:postgraduate to mean a general postgraduate admissions page, usually linking to both research and taught posgraduate admissions.</li>
+</ul>
+
+<h3>2013-10-01</h3>
+<ul>
+<li>Added lyou:web-accessibility.</li>
+<li>Added lyou:space-accessibility.</li>
+<li>Added lyou:uk-ico-publication-scheme.</li>
+<li>Added new section for UK-specific terms.</li>
 </ul>
 
 
@@ -219,6 +228,9 @@ function render_vocab()
 	render_subject( $graph->resource("http://purl.org/linkingyou/academia" ));
 	print "<a name='education'></a><h2>Education Page Types</h2>";
 	render_subject( $graph->resource("http://purl.org/linkingyou/education" ));
+	print "<a name='uk'></a><h2>UK-Specific Page Types</h2>";
+	print "<p>These pages are only really useful for UK organsations.</p>";
+	render_subject( $graph->resource("http://purl.org/linkingyou/uk" ));
 }
 
 function render_subject( $subject )

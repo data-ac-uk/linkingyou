@@ -18,6 +18,10 @@ lyou:core rdfs:label "Core" ;
 lyou:extended rdfs:label "Extended Terms" ;
 	rdfs:comment "This is used to identify which predicates are outside the the core terms. Still useful but listed in a second section."@en.
 
+lyou:extended rdfs:label "UK" ;
+	rdfs:comment "Predicates only useful to UK organisations"@en.
+
+
 
 
 foaf:homepage a owl:ObjectProperty, rdf:Property ;
@@ -194,6 +198,30 @@ lyou:open-data a owl:ObjectProperty, rdf:Property ;
 	rdfs:label "open data page"@en ;
 	rdfs:comment "Links a group or organisation to a page (or the homepage of a website) describing open data services from the organisation, eg. http://data.lincoln.ac.uk/"@en .
 
+# added 2013-12-01
+lyou:web-accessibility a owl:ObjectProperty, rdf:Property ;
+	dcterms:subject lyou:extended ;
+	rdfs:isDefinedBy lyou: ;
+	rdfs:range foaf:Document ;
+	rdfs:label "web accessibility"@en ;
+	rdfs:comment "Links a group or organisation to a document which describes the accessibility policy of the organisation regarding websites and online resources. May also be used to link the homepage of a website to an accessibility document."@en .
+
+# added 2013-12-01
+lyou:space-accessibility a owl:ObjectProperty, rdf:Property ;
+	dcterms:subject lyou:extended ;
+	rdfs:isDefinedBy lyou: ;
+	rdfs:range foaf:Document ;
+	rdfs:label "spatial acessibility"@en ;
+	rdfs:comment "Links a group or organisation to a document describing the aspects of the location and environment of this organisation. Generally this will be for the benefit of a visitor with a physical or mental disability. May also be used to link a spatial thing (such as a building, airport, campus, bus) to a description of its accessibility."@en .
+
+# added 2013-12-01
+lyou:uk-ico-publication-scheme a owl:ObjectProperty, rdf:Property ;
+	dcterms:subject lyou:uk ;
+	rdfs:isDefinedBy lyou: ;
+	rdfs:domain foaf:Organization ;
+	rdfs:range foaf:Document ;
+	rdfs:label "ICO publication scheme"@en ;
+	rdfs:comment "[Generally only for UK public sector] A link to the publication scheme for this organisation as described by the UK Information Commissioner's Office. See http://www.ico.org.uk/for_organisations/freedom_of_information/guide/publication_scheme for more information."@en .
 
 lyou:courses a owl:ObjectProperty, rdf:Property ;
 	rdfs:isDefinedBy lyou: ;
