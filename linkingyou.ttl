@@ -2,9 +2,17 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 lyou: a owl:Ontology ;
-	dcterms:title "Linking-you vocabulary" .
+	dcterms:title "Linking-you vocabulary"@en ;
+	dcterms:description "Vocabulary for describing common webpages provided by an organisation."@en-gb ;
+	dcterms:issued "2012-12-01"^^xsd:date ;
+	dcterms:publisher "University of Southampton" ;
+	dcterms:creator "Joss Winn" ;
+	dcterms:creator "Nick Jackson" ;
+	dcterms:creator "Christopher Gutteridge" ;
+	dcterms:source <http://lncn.eu/toolkit> .
 
 lyou:academia rdfs:label "Academia" ;
 	rdfs:comment "This is used to identify which predicates are related to academia (other than education) so they can be listed separately in the documentation."@en.
